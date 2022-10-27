@@ -105,12 +105,12 @@ class FormValidation{
     alertMessage(){
         const {usernameErr , emailErr , phonenumberErr , passwordErr , confirmpasswordErr}= this.errorValues
         if(usernameErr === "" && emailErr === "" && phonenumberErr === "" && passwordErr === "" && confirmpasswordErr === ""){
-            swal("Registration Successful","ThankYou , "+this.formValues.username,"success").then(() => {
+            alert("Registration Successful","ThankYou ") 
                 console.log(this.formValues)
                 this.removeInputs()
-            })
+            
         } else {
-            swal("Give Valid Inputs","Click ok to Continue" ,"error")
+            alert("Give Valid Inputs","Click ok to Continue" ,"error")
         }
     }
 
@@ -136,5 +136,5 @@ document.getElementsByClassName('form')[0].addEventListener('submit' , event => 
     ValidateUserInputs.validateConfirmpassword()
     ValidateUserInputs.alertMessage()
 })
-Footer
+
  
